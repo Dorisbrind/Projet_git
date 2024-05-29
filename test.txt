@@ -6,10 +6,10 @@ if [ "$#" -ne  4 ];then
   echo " $0 <prefix> <N> <M> <reponame> present"
   exit 1
 fi
-N=$1
-prefix=$2
-M=$3
-reponame=$4
+N=$2
+prefix=$3
+M=$4
+reponame=$5
 
 mkdir -p "$reponame"
 
