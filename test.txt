@@ -1,1 +1,32 @@
-Bonjour tout le monde 
+####presence des 3 elements
+
+
+
+if [ "$#" -ne  4 ];then
+  echo " $0 <prefix> <N> <M> <reponame> present"
+  exit 1
+fi
+N=$1
+prefix=$2
+M=$3
+reponame=$4
+
+mkdir -p "$reponame"
+
+
+echo "les arguments sont present "
+for ((i=1; i<=N; i++));
+ do
+  filename="${prefix}_$(date +%Y-%m-%d-%H-%M-%S-%3N).txt"
+  touch "$reponame/$filename"
+  echo "Créé: $reponame/$filename"
+
+  if [ $i -lt $N ]; then
+    sleep $(echo "$M / 1000" | bc -l)
+  fi
+done
+
+
+echo "Création $N fichers terminée"
+##########################REORGANIZATION###############################
+
