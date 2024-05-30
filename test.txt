@@ -6,10 +6,19 @@ if [ "$#" -ne  4 ];then
   echo " $0 <prefix> <N> <M> <reponame> present"
   exit 1
 fi
+<<<<<<< HEAD
 Number line=$1
 pref=$2
 time=$3
 dir=$4
+=======
+N=$1
+prefix=$2
+M=$3
+reponame=$4
+
+mkdir -p "$reponame"
+>>>>>>> master
 
 
 echo "les arguments sont present "
